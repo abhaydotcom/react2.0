@@ -7,13 +7,7 @@ function App() {
   return (
     <>
       
-      <h1>Counter with viteReact</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        
-      </div>
+    <marquee behavior="2" direction="bottom">Abhay Kumar Singh</marquee>
      
     </>
   )
