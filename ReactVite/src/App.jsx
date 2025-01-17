@@ -1,15 +1,9 @@
-import { useState } from 'react'
 
+import Hello from "./abhay"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      
-    <marquee behavior="2" direction="bottom">Abhay Kumar Singh</marquee>
-     
-    </>
+function App(){
+  return(
+     <Hello/>
   )
 }
 
