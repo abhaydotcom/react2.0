@@ -1,9 +1,9 @@
 import './index.css';
-import Hello from "./abhay"
+import Count from './counter';
 
 function App(){ 
   return(
-     <Hello/>
+     <Count/>
   )
 }
 
