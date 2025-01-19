@@ -15,7 +15,7 @@ const Count = () => {
   return (
   
 
-   <div className="bg-slate-500 border-red-600 flex justify-center align-middle">
+   <div className="bg-slate-500 border-blue-600 flex justify-center align-middle">
   
    <h1 className='bg-slate-700'  >Counter App</h1>
    

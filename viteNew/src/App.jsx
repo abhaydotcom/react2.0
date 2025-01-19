@@ -1,7 +1,8 @@
 import './index.css';
 import Count from './counter';
 
-function App(){ 
+function App(){
+   
   return(
      <Count/>
   )
