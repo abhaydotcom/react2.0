@@ -1,10 +1,10 @@
 
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App'
+import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
-<h1 className='bg-slate-600'>
-    Hello
-</h1>
+
+<App/>
+
 )
