@@ -23,7 +23,6 @@ const User = () => {
       
     // }, [])
     
-
   return (
     <div className='bg-teal-400 h-80' >User: Abhay Kumar Singh
     
