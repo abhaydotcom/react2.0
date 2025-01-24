@@ -1,10 +1,10 @@
 import React from 'react'
-import { useActionState } from 'react'
 import { useState} from 'react'
 
 const Count = () => {
 
 const[con,setcon]=useState(0);
+
 
 const  handle1=()=>{
     setcon(con+1);
@@ -16,7 +16,9 @@ const handle2=()=>{
 
 
   return (
+
     <div className='bg-blue-300  h-80   rounded-2xl  '>
+
         <div className='p-4'><h1 className='font-extrabold '>Counter App</h1></div>
 
         <div className='p-2 '><h2 className='text-2xl'>{con}</h2></div>
