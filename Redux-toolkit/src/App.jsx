@@ -1,4 +1,5 @@
 import AddTodo from "./component/addTodo" 
+import Todos from "./component/todo"
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
 
        
        <AddTodo/>
+       <Todos/>
     </>
   )
 }
