@@ -13,10 +13,14 @@ export class AuthService{
     async createAccount({email,password,name}){
         try {
             const userAccount= await this.account.create (ID.unique(), email,password,name);
-            if(userAccount) return this.login({email,password});
-            else return userAccount;
+            if(userAccount){
+                 return this.login({email,password});
+            }
+            else{
+                return userAccount;
+            }
         } catch (error) {
-            throw error;
+            console.log("Appwrite error :: CreateAccount",error )
         }
     }
 
@@ -24,7 +28,7 @@ export class AuthService{
         try {
             return await this.account.createEmailPasswordSession(email,password);
         } catch (error) {
-            throw error;
+            console.log("Appwrite error :: Login",error )
         }
     }
 
@@ -32,8 +36,10 @@ export class AuthService{
         try {
             return await this.account.get();
         } catch (error) {
-            console.log("appwrite error ka error hai bhai",error)
+            console.log("Appwrite error :: GetCurrentUser",error)
         }
+
+        return null;
     }
 
     async logout(){
