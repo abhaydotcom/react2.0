@@ -12,6 +12,7 @@ import PostCard from './postCard'
 import Input from "./Input";
 import Select from "./select"
 import  AuthLayout from "./AuthLayout";
+   
 
 export {
     Header,
