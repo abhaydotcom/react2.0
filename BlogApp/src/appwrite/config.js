@@ -7,19 +7,23 @@ export class Service{
     databases;
     bucket;
     constructor(){
-        this.client.setEndpoint(Conf.appwriteUrl).setProject(Conf.appwriteProjectId);
+        this.client
+        .setEndpoint(Conf.appwriteUrl)
+        .setProject(Conf.appwriteProjectId);
         this.databases= new Databases(this.client);
         this.bucket=new Storage(this.client)
     }
 
-    async createPost({title,slug,content,featureImage,status}){
+    async createPost({title,slug,content,featureImage,status,userId }){
             try {
                 return await this.databases.createDocument(
-                    Conf.appwriteCollectionId,
-                    Conf.appwriteDatabaseId,slug,{
-                        title,content,featureImage,status,userId,
+                    Conf.appwriteDatabaseId,   
+                    Conf.appwriteCollectionId,    
+                    slug,{
+                        title, content, featureImage, status, userId
                     }
-                )
+                );
+                
                 
             } catch (error) {
                 console.log("Appwrite Error :: createPost",error);
@@ -29,8 +33,8 @@ export class Service{
     async updatePost(slug,{title,content,featureImage,status}){
         try {
             return await this.databases.updateDocument(
-                Conf.appwriteCollectionId,
                 Conf.appwriteDatabaseId,
+                Conf.appwriteCollectionId,
                 slug,{
                     title,content,featureImage,status,
                 }
@@ -71,8 +75,8 @@ export class Service{
 
         try {
             return await this.databases.listDocuments(
-                Conf.appwriteCollectionId,
                 Conf.appwriteDatabaseId,
+                Conf.appwriteCollectionId,
                 queries,
             )
             

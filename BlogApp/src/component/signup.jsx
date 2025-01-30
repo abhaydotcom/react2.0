@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form'
 function Signup() {
     const navigate=useNavigate();
     const dispath=useDispatch();
-    const [error,setError]=useEffect("")
+    const [error,setError]=useState("")
     const {register,handleSubmit}=useForm();
 
     const create= async(data)=>{
